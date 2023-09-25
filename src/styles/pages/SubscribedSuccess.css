@@ -1,0 +1,73 @@
+.SubscribedSuccess {
+  background: var(--white);
+  min-height: 100vh;
+  max-width: 450px;
+  padding: 2em 1em;
+  display: grid;
+  grid-auto-flow: row;
+  place-items: center;
+  transition: all 0.2s ease;
+}
+
+.SubscribedSuccess-container {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 1em;
+  padding-right: 1em;
+}
+
+.SubscribedSuccess-icon {
+  margin-bottom: 1em;
+}
+
+.SubscribedSuccess-h1 {
+  font-size: 2em;
+  line-height: 1;
+}
+
+.SubscribedSuccess-p {
+  line-height: 1.5;
+}
+
+.SubscribedSuccess-span {
+  font-weight: 700;
+}
+
+.SubscribedSuccess-button {
+  align-self: self-end;
+  width: 90%;
+  padding: 1em;
+  border-radius: 0.5em;
+  outline: none;
+  border: none;
+  font-family: inherit;
+  color: var(--white);
+  background: var(--dark-slate-grey);
+  cursor: pointer;
+  transition: background 0.3s ease-out;
+}
+
+.SubscribedSuccess-button:hover {
+  background: var(--tomato)
+}
+
+@media (width >= 768px) {
+  .SubscribedSuccess {
+    min-height: unset;
+    height: 450px;
+    border-radius: 2em;
+    padding: 2em 3em;
+  } 
+  
+  .SubscribedSuccess-container {
+    padding-right: unset;
+  }
+  
+  .SubscribedSuccess-h1 {
+    font-size: 3em;
+  }
+
+  .SubscribedSuccess-button {
+    width: 100%;
+  }
+}

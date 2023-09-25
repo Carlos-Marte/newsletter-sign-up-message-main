@@ -17,7 +17,7 @@ function NewsletterForm () {
     const { emailValue } = Object.fromEntries(new window.FormData(event.target));
 
     if (emailValue && validateEmail(emailValue)) {
-      navigate('/subscribed');
+      navigate('/subscribed', { state: { email: emailValue } });
     } else {
       setisValidEmail(false);
     }
