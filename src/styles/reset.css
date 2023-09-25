@@ -6,4 +6,5 @@
 
 html {
   font-family: 'Roboto', sans-serif;
+  color: var(--dark-slate-grey);
 }

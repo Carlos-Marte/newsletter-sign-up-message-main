@@ -1,0 +1,59 @@
+.NewsletterForm {
+  margin-top: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.NewsletterForm-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  font-size: 0.75em;
+  font-weight: 700;
+}
+
+.NewsletterForm-containerLabelMessages {
+  display: flex;
+  justify-content: space-between;
+}
+
+.NewsletterForm-errorMessage {
+  color: var(--tomato);
+}
+
+.NewsletterForm-input {
+  padding: 1.3em;
+  border-radius: 0.5em;
+  outline: none;
+  border: 1px solid var(--grey);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.NewsletterForm-input::placeholder {
+  color: var(--grey);
+}
+
+.NewsletterForm-input.isInvalidEmail {
+  border: 1px solid var(--tomato);
+  color: var(--tomato);
+  background: var(--tomato-transparent);
+}
+
+.NewsletterForm-input.isInvalidEmail::placeholder {
+  color: var(--tomato);
+}
+
+.NewsletterForm-input--button {
+  background: var(--dark-slate-grey);
+  color: var(--white);
+  border: none;
+  transition: background 0.3s ease-out;
+}
+
+
+.NewsletterForm-input--button:hover {
+  background: var(--tomato)
+}
