@@ -2,7 +2,7 @@ import { useId, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function NewsletterForm () {
-  const [isValidEmail, setisValidEmail] = useState(false);
+  const [isValidEmail, setisValidEmail] = useState(true);
   const navigate = useNavigate();
   const inputEmailId = useId();
 
@@ -18,6 +18,8 @@ function NewsletterForm () {
 
     if (emailValue && validateEmail(emailValue)) {
       navigate('/subscribed');
+    } else {
+      setisValidEmail(false);
     }
   };
 
@@ -26,9 +28,9 @@ function NewsletterForm () {
       <label className='NewsletterForm-label' htmlFor={inputEmailId}>
         <div className='NewsletterForm-containerLabelMessages'>
           Email address
-          {Boolean(isValidEmail) && <p className='NewsletterForm-errorMessage'>Valid email required</p>}
+          {Boolean(!isValidEmail) && <p className='NewsletterForm-errorMessage'>Valid email required</p>}
         </div>
-        <input className={isValidEmail ? 'NewsletterForm-input isInvalidEmail' : 'NewsletterForm-input'} id={inputEmailId} type="text" placeholder="email@company.com" name='emailValue' />
+        <input className={isValidEmail ? 'NewsletterForm-input' : 'NewsletterForm-input isInvalidEmail'} id={inputEmailId} type="text" placeholder="email@company.com" name='emailValue' />
       </label>
       <input className='NewsletterForm-input NewsletterForm-input--button' type="submit" value="Subscribe to monthly newsletter" />
     </form>
